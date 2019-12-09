@@ -31,23 +31,23 @@ a:hover span
     color: #dc143c;
 }
 
-.header
+.page-header__h1
 {
     display: flex;
     align-items: center;
 }
 
-.header > a
+.page-header__h1 > a
 {
     margin: 10px;
 }
 
-.second
+.page-header__h2
 {
     color: #808080;
 }
 
-.pageHeader
+.page-header
 {
     grid-area: header;
     padding: 10px;
@@ -66,43 +66,43 @@ a:hover span
         '. popular program film .';
 }
 
-.news__widget
+.main__news-widget
 {
     grid-area: news;
     width: 512px;
 }
 
-.preview
+.widget-preview
 {
     color: #808080;
 }
 
-.rate
+.widget-rate
 {
     margin-top: 10px;
 }
 
-.rate span
+.widget-rate span
 {
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.widget__header,
-.offer > a
+.widget-header,
+.main__offer > a
 {
     color: #0054b9;
     font-size: 123%;
     font-weight: 500;
 }
 
-.widget__header::-webkit-details-marker,
-.notify__desk > summary::-webkit-details-marker
+.widget-header::-webkit-details-marker,
+.notify-desk > summary::-webkit-details-marker
 {
     display: none;
 }
 
-.widget__header::after
+.widget-header::after
 {
     margin-left: 10px;
     content: '';
@@ -112,113 +112,113 @@ a:hover span
     position: absolute;
 }
 
-details[open] > .widget__header::after
+details[open] > .widget-header::after
 {
     transform: rotate(180deg);
 }
 
-details[open] ~ .preview
+details[open] ~ .widget-preview
 {
     display: none;
 }
 
-details:not([open]) ~ .preview
+details:not([open]) ~ .widget-preview
 {
     display: inline-block;
 }
 
-.news:not([open]) > summary > .open
+details:not([open]) > summary > .content-open
 {
     display: none;
 }
 
-.news[open] > summary > .close
+details[open] > summary > .content-close
 {
     display: none;
 }
 
-.open > a
+.content-open > a
 {
     margin-right: 10px;
     color: #6da2e1;
 }
 
-.today__item,
-.town__item,
-.interesting__item
+.today-item,
+.town-item,
+.interesting-item
 {
     display: none;
 }
 
-.today__item:target,
-.town__item:target,
-.interesting__item:target
+.today-item:target,
+.town-item:target,
+.interesting-item:target
 {
     display: flex;
     flex-direction: column;
 }
 
-.today__item:target ~ .widget__header .today__header,
-.town__item:target ~ .widget__header .town__header,
-.interesting__item:target ~ .widget__header .interesting__header
+.today-item:target ~ .widget-header .today__header,
+.town-item:target ~ .widget-header .town__header,
+.interesting-item:target ~ .widget-header .interesting__header
 {
     color: #0054b9;
 }
 
-.news__content__item
+.content__item
 {
     display: flex;
     margin-top: 5px;
 }
 
-.news__content__item > img
+.content__item > img
 {
     margin-left: -15px;
     width: 15px;
     height: 15px;
 }
 
-.news__content__item > a,
-.offer > p
+.content__item > a,
+.main__offer > p
 {
     margin: 0;
 }
 
-.news__content__item > a
+.content__item > a
 {
     margin-left: 5px;
 }
 
-.offer
+.main__offer
 {
     grid-area: offer;
     display: flex;
     flex-direction: column;
 }
 
-.offer img
+.main__offer img
 {
     margin-bottom: 10px;
     width: 120px;
     height: 90px;
 }
 
-.weather__widget
+.main__weather-widget
 {
     grid-area: weather;
 }
 
-.traffic_widget
+.main__traffic-widget
 {
     grid-area: traffic;
 }
 
-.map__widget
+.main__map-widget
 {
     grid-area: map;
 }
 
-.popular__widget
+.main__popular-widget
 {
     grid-area: popular;
 }
@@ -241,22 +241,22 @@ dd
     margin-left: 5px;
 }
 
-.popular__item
+.popular-widget__content
 {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
 }
 
-.program__widget
+.main__program-widget
 {
     grid-area: program;
 }
 
-.program__item,
-.film__item,
-.serial__item,
-.now__item
+.program-widget__content,
+.film-item,
+.serial-item,
+.now-item
 {
     list-style-type: none;
     margin-top: 5px;
@@ -264,79 +264,69 @@ dd
 
 }
 
-.program__item > li > a
+.program-widget__content > li > a
 {
     margin-left: 10px;
 }
 
-.channel
+.additional
 {
     color: #808080;
 }
 
-.film__widget
+.main__film-widget
 {
     grid-area: film;
 }
 
-.film:not([open]) > summary > .open
-{
-    display: none;
-}
-
-.film[open] > summary > .close
-{
-    display: none;
-}
-
-.film__item,
-.serial__item,
-.now__item
+.film-item,
+.serial-item,
+.now-item
 {
     list-style-image: url('goals/play.svg');
     display: none;
 }
 
-.film__item:target,
-.serial__item:target,
-.now__item:target
+.film-item:target,
+.serial-item:target,
+.now-item:target
 {
     display: block;
 }
 
-.film__item:target ~ .widget__header .film__header,
-.serial__item:target ~ .widget__header .serial__header,
-.now__item:target ~ .widget__header .now__header
+.film-item:target ~ .widget-header .film__header,
+.serial-item:target ~ .widget-header .serial__header,
+.now-item:target ~ .widget-header .now__header
 {
     color: #0054b9;
 }
 
-.weather__content,
-.traffic__content
+.weather-widget__content,
+.traffic-widget__content
 {
     display: flex;
     margin-top: 5px;
 }
 
-.map__content
+.map-widget__content
 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
 }
 
-.map__content > a
+.map-widget__content > a
 {
     margin-right: 10px;
 }
 
-.weather__content > img
+.weather-widget__content > img
 {
     width: 48px;
     height: 48px;
 }
 
-.traffic__content > img
+.traffic-widget__content > img
 {
     margin-top: auto;
     margin-bottom: auto;
@@ -350,20 +340,20 @@ dd
     margin-left: 5px;
 }
 
-.weather__content > .temp::after
+.weather-widget__content > .temp::after
 {
     content: '\00B0';
 }
 
-.weather__content > p,
-.traffic__content > p
+.weather-widget__content > p,
+.traffic-widget__content > p
 {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5px;
 }
 
-.notify__desk
+.notify-desk
 {
     grid-area: notify;
     display: grid;
@@ -377,18 +367,18 @@ dd
     background: #fff;
 }
 
-.optional
+.notify-desk__optional
 {
     opacity: 0;
 }
 
-.notify__desk__login
+.notify-desk__login
 {
     margin-bottom: 15px;
     font-weight: 700;
 }
 
-.notify__desk__item
+.notify-desk__item
 {
     margin: 5px 0;
 }
@@ -399,23 +389,23 @@ dd
     font-weight: 700;
 }
 
-.card
+.notify-desk__card
 {
     display: none;
 }
 
-.notify__desk > span,
-.notify__desk > span > span
+.notify-desk > span,
+.notify-desk > span > span
 {
     display: block;
 }
 
-.content
+.notify-desk__content
 {
     grid-area: content;
 }
 
-.avatar
+.notify-desk__avatar
 {
     grid-area: avatar;
     width: 36px;
@@ -434,17 +424,17 @@ dd
     margin: 4px;
 }
 
-.card:checked ~ .notify__desk
+.notify-desk__card:checked ~ .notify-desk
 {
     height: 100px;
 }
 
-.card:checked ~ .notify__desk .optional
+.notify-desk__card:checked ~ .notify-desk .notify-desk__optional
 {
     opacity: 1;
 }
 
-.pageFooter
+.page-footer
 {
     grid-area: footer;
     padding: 10px;
@@ -452,24 +442,24 @@ dd
     background: #dcdcdc;
 }
 
-.footer
+.page-footer__content
 {
     display: flex;
     align-items: center;
     color: #808080;
 }
 
-.footer > a
+.page-footer__content > a
 {
     margin: 5px;
 }
 
-.footer > .label
+.page-footer__content > .page-footer__label
 {
     margin-left: auto;
 }
 
-.searchLine
+.main__search-line
 {
     grid-area: search;
     display: grid;
@@ -478,51 +468,51 @@ dd
         'example';
 }
 
-.what-search
+.search-line__kind
 {
     grid-area: what-serch;
     margin-top: auto;
     margin-bottom: 5px;
 }
 
-.what-search > a
+.search-line__kind > a
 {
     color: #0054b9;
     margin-right: 20px;
     font-size: 1.16em;
 }
 
-.example
+.search-line__example
 {
     grid-area: example;
 }
 
-.example > p
+.search-line__example > p
 {
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 0;
 }
 
-.example > a
+.search-line__example > a
 {
     display: inline-block;
     color: #808080;
 }
 
-.logo
+.main__logo
 {
     grid-area: logo;
     margin-right: 0;
     margin-left: auto;
 }
 
-.notify__desk__login::first-letter
+.notify-desk__login::first-letter
 {
     color: #f00;
 }
 
-.searcherLine
+.search-line__searcher
 {
     grid-area: searcherLine;
     width: 95%;
@@ -530,14 +520,14 @@ dd
     align-items: center;
 }
 
-.searcher
+.searcher__input
 {
     width: 90%;
     height: 36px;
     border: 2px solid #ffd700;
 }
 
-.submitSearch
+.searcher__submit-button
 {
     height: 36px;
     width: 10%;
@@ -547,7 +537,7 @@ dd
     font-size: 18px;
 }
 
-.arrow
+.searcher__arrow
 {
     width: 0;
     height: 0;
