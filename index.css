@@ -91,7 +91,8 @@ a:hover span
 
 .widget-header,
 .main__offer > a,
-.main__news-widget > details > label
+.main__news-widget > details > label,
+.main__film-widget > details > label
 {
     color: #0054b9;
     font-size: 123%;
@@ -144,8 +145,14 @@ details[open] > summary > .content-close
     margin-left: 343px;
 }
 
+.main__film-widget > details[open] > summary
+{
+    margin-left: 200px;
+}
+
 .content-open > a,
-.main__news-widget > details > label
+.main__news-widget > details > label,
+.main__film-widget > details > label
 {
     margin-right: 10px;
     color: #6da2e1;
@@ -154,17 +161,25 @@ details[open] > summary > .content-close
 .header__today,
 .header__town,
 .header__interest,
-.header__button,
+.header__now,
+.header__film,
+.header__serial,
 .news-widget__today,
 .news-widget__town,
-.news-widget__interesting
+.news-widget__interesting,
+.film-widget__now,
+.film-widget__films,
+.film-widget__serial
 {
     display: none;
 }
 
 .header__today:checked ~ .news-widget__today,
 .header__town:checked ~ .news-widget__town,
-.header__interest:checked ~ .news-widget__interesting
+.header__interest:checked ~ .news-widget__interesting,
+.header__now:checked ~ .film-widget__now,
+.header__film:checked ~ .film-widget__films,
+.header__serial:checked ~ .film-widget__serial
 {
     display: flex;
     flex-direction: column;
@@ -172,7 +187,10 @@ details[open] > summary > .content-close
 
 .header__today:checked + label,
 .header__town:checked + label,
-.header__interest:checked + label
+.header__interest:checked + label,
+.header__now:checked + label,
+.header__film + label,
+.header__serial + label
 {
     color: #0054b9;
 }
@@ -266,9 +284,9 @@ dd
 }
 
 .program-widget__content,
-.film-item,
-.serial-item,
-.now-item
+.film-widget__films,
+.film-widget__serial,
+.film-widget__now
 {
     list-style-type: none;
     margin-top: 5px;
@@ -291,26 +309,11 @@ dd
     grid-area: film;
 }
 
-.film-item,
-.serial-item,
-.now-item
+.film-widget__films,
+.film-widget__serial,
+.film-widget__now
 {
     list-style-image: url('goals/play.svg');
-    display: none;
-}
-
-.film-item:target,
-.serial-item:target,
-.now-item:target
-{
-    display: block;
-}
-
-.film-item:target ~ .widget-header .film__header,
-.serial-item:target ~ .widget-header .serial__header,
-.now-item:target ~ .widget-header .now__header
-{
-    color: #0054b9;
 }
 
 .weather-widget__content,

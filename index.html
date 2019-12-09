@@ -40,7 +40,7 @@
             <input type="radio" name="news-widget__header" id="header__interest" class="header__interest">
             <label for="header__interest">Интересное</label>
 
-            <div id="news-widget__today" class="news-widget__today">
+            <div class="news-widget__today">
                 <div class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187770">
@@ -72,7 +72,7 @@
                     </a>
                 </div>
             </div>
-            <div id="news-widget__town" class="news-widget__town">
+            <div class="news-widget__town">
                 <div class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187676https://www.kommersant.ru/doc/4187676">
@@ -104,7 +104,7 @@
                     </a>
                 </div>
             </div>
-            <div id="news-widget__interesting" class="news-widget__interesting">
+            <div class="news-widget__interesting">
                 <div class="content__item">
                     <img src="goals/logo-lenta.png" alt="l">
                     <a href="https://lenta.ru/news/2019/12/07/gibdd/">
@@ -295,18 +295,23 @@
         <p class="widget-preview">Программа передач по каналам</p>
     </div>
     <div class="main__film-widget">
-        <details class="film-widget" open>
+        <details open>
             <summary class="widget-header">
-                <span class="content-open">
-                    <a href="#now-item" class="film-widget__now">Эфир</a>
-                    <a href="#film-item" class="film-widget__film">Фильмы</a>
-                    <a href="#serial-item" class="film-widget__serial">Сериалы</a>
-                </span>
                 <span class="content-close">
                     <span>Сейчас в эфире</span>
                 </span>
             </summary>
-            <ul class="now-item" id="now-item">
+
+            <input type="radio" name="film-widget__header" id="header__now" class="header__now" checked>
+            <label for="header__now">Эфир</label>
+
+            <input type="radio" name="film-widget__header" id="header__film" class="header__film">
+            <label for="header__film">Фильмы</label>
+
+            <input type="radio" name="film-widget__header" id="header__serial" class="header__serial">
+            <label for="header__serial">Сериалы</label>
+
+            <ul class="film-widget__now">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Битва за Севастополь
@@ -326,7 +331,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="film-item" id="film-item">
+            <ul class="film-widget__films">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Ромео и Джульетта
@@ -346,7 +351,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="serial-item" id="serial-item">
+            <ul class="film-widget__serial">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Зона
