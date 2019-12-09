@@ -24,18 +24,23 @@
         <img src="goals/logo-y.svg" alt="Яндекс">
     </a>
     <div class="main__news-widget">
-        <details class="news-widget__content" open>
+        <details open>
             <summary class="widget-header">
-                <span class="content-open">
-                    <a href="#today-item" class="widget-header__today">Сейчас в СМИ</a>
-                    <a href="#town-item" class="widget-header__town">в Екатеринбурге</a>
-                    <a href="#interesting-item" class="widget-header__interesting">Интересное</a>
-                </span>
                 <span class="content-close">
-                    <a>Сейчас в СМИ</a>
+                    <span>Сейчас в CМИ</span>
                 </span>
             </summary>
-            <div id="today-item" class="today-item">
+
+            <input type="radio" name="news-widget__header" id="header__today" class="header__today" checked>
+            <label for="header__today">Сейчас в СМИ</label>
+
+            <input type="radio" name="news-widget__header" id="header__town" class="header__town">
+            <label for="header__town">в Екатеринбурге</label>
+
+            <input type="radio" name="news-widget__header" id="header__interest" class="header__interest">
+            <label for="header__interest">Интересное</label>
+
+            <div id="news-widget__today" class="news-widget__today">
                 <div class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187770">
@@ -67,7 +72,7 @@
                     </a>
                 </div>
             </div>
-            <div id="town-item" class="town-item">
+            <div id="news-widget__town" class="news-widget__town">
                 <div class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187676https://www.kommersant.ru/doc/4187676">
@@ -99,7 +104,7 @@
                     </a>
                 </div>
             </div>
-            <div id="interesting-item" class="interesting-item">
+            <div id="news-widget__interesting" class="news-widget__interesting">
                 <div class="content__item">
                     <img src="goals/logo-lenta.png" alt="l">
                     <a href="https://lenta.ru/news/2019/12/07/gibdd/">
