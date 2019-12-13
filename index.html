@@ -7,14 +7,14 @@
 </head>
 <body>
 <header class="page-header">
-    <div class="page-header__h1">
+    <div class="page-header__nav-bar">
         <a href="https://yandex.ru/tune/geo/">
             Екатеринбург
         </a>
         <a href="https://yandex.ru/support/common/yandex-settings/homepage.html">
             Сделать стартовой
         </a>
-        <a class="page-header__h2" href="https://yandex.ru/legal/confidential/">
+        <a class="minor" href="https://yandex.ru/legal/confidential/">
             Конфиденциальность
         </a>
     </div>
@@ -23,129 +23,143 @@
     <a href="https://yandex.ru/" class="main__logo">
         <img src="goals/logo-y.svg" alt="Яндекс">
     </a>
+
     <div class="main__news-widget">
         <details open>
             <summary class="widget-header">
-                <span class="content-close">
+                <span class="close">
                     <span>Сейчас в CМИ</span>
                 </span>
             </summary>
 
-            <input type="radio" name="news-widget__header" id="header__today" class="header__today" checked>
-            <label for="header__today">Сейчас в СМИ</label>
+            <input type="radio" name="news-widget__tab" id="tab__today" class="tab__today tab hidden" checked>
+            <label for="tab__today" class="tab-label">Сейчас в СМИ</label>
 
-            <input type="radio" name="news-widget__header" id="header__town" class="header__town">
-            <label for="header__town">в Екатеринбурге</label>
+            <input type="radio" name="news-widget__tab" id="tab__town" class="tab__town tab hidden">
+            <label for="tab__town" class="tab-label">в Екатеринбурге</label>
 
-            <input type="radio" name="news-widget__header" id="header__interest" class="header__interest">
-            <label for="header__interest">Интересное</label>
+            <input type="radio" name="news-widget__tab" id="tab__interesting"
+                   class="tab__interesting tab hidden">
+            <label for="tab__interesting" class="tab-label">Интересное</label>
 
-            <div class="news-widget__today">
-                <div class="content__item">
+            <ul class="news-widget__today content hidden">
+                <li class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187770">
                         Исполком WADA отстранил Россию от соревнований на четыре года
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-ved.png" alt="l">
                     <a href="https://www.vedomosti.ru/">
                         Кремль подтвердил двустороннюю встречу Путина и Зеленского в Париже
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187590">
                         В России могут запретить взыскивание долгов с пенсий
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-vesti.png" alt="l">
                     <a href="https://iz.ru/">
                         Мосгорсуд отменил арест активов экс-министра Абызова на 1 млрд рублей
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-lenta.png" alt="l">
                     <a href="https://lenta.ru/news/2019/12/09/konst/">
                         Желающих поменять Конституцию россиян стало больше
                     </a>
-                </div>
-            </div>
-            <div class="news-widget__town">
-                <div class="content__item">
+                </li>
+            </ul>
+            <ul class="news-widget__town content hidden">
+                <li class="content__item">
                     <img src="goals/logo-com.png" alt="l">
                     <a href="https://www.kommersant.ru/doc/4187676https://www.kommersant.ru/doc/4187676">
                         Евгений Куйвашев организовал голосование о выходном 31 декабря
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-xo.png" alt="l">
                     <a href="https://echo.msk.ru/news/2550729-echo.html">
                         На выставке в Екатеринбурге заклеили картины с обнаженными женщинами
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-tagilcity.jpg" alt="l">
                     <a href="https://tagilcity.ru/">
                         Мэрия Нижнего Тагила определила застройшика детского сада на 170 мест
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-xo.png" alt="l">
                     <a href="https://www.echoekb.ru/news/2019/12/09/83257/">
                         Полиция в Екатеринбурге ищет мужчину, пристававшего к школьнице
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-bb.jpg" alt="l">
                     <a href="https://veved.ru/news/135299-v-ekaterinburge-soxranitsya-teplaya-pogoda.html">
                         В Екатренибурге сохранится теплая погода
                     </a>
-                </div>
-            </div>
-            <div class="news-widget__interesting">
-                <div class="content__item">
+                </li>
+            </ul>
+            <ul class="news-widget__interesting content hidden">
+                <li class="content__item">
                     <img src="goals/logo-lenta.png" alt="l">
                     <a href="https://lenta.ru/news/2019/12/07/gibdd/">
                         ГИБДД изменит сдачу теории на экзамене на права
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/ria-novosti-logo.jpg" alt="l">
                     <a href="https://ria.ru/20191208/1562110024.html">
                         Минпросвещения предложило повысить учителям зарплаты
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/rt-logo.jpg" alt="l">
                     <a href="https://russian.rt.com/russia/news/694609-gornolyzhnye-kurorty-rossiya">
                         В Ростуризме назвали лучшие горнолыжные курорты России
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-tass.jpg" alt="l">
                     <a href="https://tass.ru/sport/7292245">
                         Российские биатлонисты стали четвертыми в эстафете
                     </a>
-                </div>
-                <div class="content__item">
+                </li>
+                <li class="content__item">
                     <img src="goals/logo-tass.jpg" alt="l">
                     <a href="https://tass.ru/sport/7272529">
                         Овечкин починил шлем с помощью паяльной лампы во время матча НХЛ
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </details>
-        <p class="widget-preview">Актуальные новости и события дня</p>
-        <div class="widget-rate">
-            <a>USD MOEX</a>
-            <span>63,76<span class="additional">+0,04</span></span>
-            <a>EUR MOEX</a>
-            <span>70,50<span class="additional">-0,26</span></span>
-            <a>НЕФТЬ</a>
-            <span>64,29<span class="additional">+1,38%</span></span>
-        </div>
+        <p class="widget-preview minor">Актуальные новости и события дня</p>
+        <dl class="widget-rate">
+            <dt class="currency inline">
+                <a>USD MOEX</a>
+            </dt>
+            <dd class="currency-rate inline">
+                63,76<span class="minor">+0,04</span>
+            </dd>
+            <dt class="currency inline">
+                <a>EUR MOEX</a>
+            </dt>
+            <dd class="currency-rate inline">
+                70,50<span class="minor">-0,26</span>
+            </dd>
+            <dt class="currency inline">
+                <a>НЕФТЬ</a>
+            </dt>
+            <dd class="currency-rate inline">
+                64,29<span class="minor">+1,38%</span>
+            </dd>
+        </dl>
     </div>
     <div class="main__offer">
         <a href="https://avia.yandex.ru/">
@@ -155,7 +169,7 @@
         <p>подскажут Яндекс.Авиабилеты</p>
     </div>
     <div class="main__search-line">
-        <div class="search-line__kind">
+        <nav class="search-line__nav">
             <a href="https://yandex.ru/portal/video">Видео</a>
             <a href="https://yandex.ru/images/">Картинки</a>
             <a href="https://yandex.ru/news/">Новости</a>
@@ -164,7 +178,7 @@
             <a href="https://translate.yandex.ru/">Переводчик</a>
             <a href="https://music.yandex.ru/">Музыка</a>
             <a href="https://yandex.ru/all">ещё</a>
-        </div>
+        </nav>
         <form class="search-line__searcher">
             <input type="search" class="searcher__input">
             <button type="submit" class="searcher__submit-button">Найти</button>
@@ -195,7 +209,7 @@
                 </p>
             </div>
         </details>
-        <p class="widget-preview">Прогноз погоды рядом с вами</p>
+        <p class="widget-preview minor">Прогноз погоды рядом с вами</p>
     </div>
     <div class="main__traffic-widget">
         <details class="traffic-widget" open>
@@ -210,7 +224,7 @@
                 </a></p>
             </div>
         </details>
-        <p class="widget-preview">Ситуация на дорогах в вашем городе</p>
+        <p class="widget-preview minor">Ситуация на дорогах в вашем городе</p>
     </div>
     <div class="main__map-widget">
         <details class="map-widget" open>
@@ -227,48 +241,48 @@
                 </a>
             </div>
         </details>
-        <p class="widget-preview">Навигация в городе</p>
+        <p class="widget-preview minor">Навигация в городе</p>
     </div>
     <div class="main__popular-widget">
         <details class="popular-widget" open>
             <summary class="widget-header">Посещаемое</summary>
             <dl class="popular-widget__content">
                 <div>
-                    <dt><a href="https://auto.ru/?from=all-services">
+                    <dt class="source inline"><a href="https://auto.ru/?from=all-services">
                         Авто.ру
                     </a></dt>
-                    <dd><a href="https://auto.ru/cars/all/">
+                    <dd class="page inline"><a href="https://auto.ru/cars/all/">
                         привод 4x4 от 400 000
                     </a></dd>
                 </div>
                 <div>
-                    <dt><a href="https://afisha.yandex.ru/">Афиша</a></dt>
-                    <dd><a href="https://afisha.yandex.ru/">
+                    <dt class="source inline"><a href="https://afisha.yandex.ru/">Афиша</a></dt>
+                    <dd class="page inline"><a href="https://afisha.yandex.ru/">
                         вернем до 25% баллами
                     </a></dd>
                 </div>
                 <div>
-                    <dt><a href="https://beru.ru/">
+                    <dt class="source inline"><a href="https://beru.ru/">
                         Беру
                     </a></dt>
-                    <dd><a href="https://beru.ru/catalog/detskie-tovary/">
+                    <dd class="page inline"><a href="https://beru.ru/catalog/detskie-tovary/">
                         товары для детей
                     </a></dd>
                 </div>
             </dl>
         </details>
-        <p class="widget-preview">Популярные сервисы Яндекса</p>
+        <p class="widget-preview minor">Популярные сервисы Яндекса</p>
     </div>
     <div class="main__program-widget">
         <details class="program-widget" open>
             <summary class="widget-header">Телепрограмма</summary>
-            <ul class="program-widget__content">
+            <ul class="program-widget__content content">
                 <li>
                     12:20
                     <a href="https://tv.yandex.ru/program/tri-kota-2395718?eventId=147707920">
                         Три кота
                     </a>
-                    <a class="additional" href="https://tv.yandex.ru/channel/karusel-20">
+                    <a class="minor" href="https://tv.yandex.ru/channel/karusel-20">
                         Карусель
                     </a>
                 </li>
@@ -277,7 +291,7 @@
                     <a href="https://tv.yandex.ru/program/novosti-3943650?eventId=147795538">
                         Новости
                     </a>
-                    <a class="additional" href="https://tv.yandex.ru/channel/ren-30">
+                    <a class="minor" href="https://tv.yandex.ru/channel/ren-30">
                         РЕНТВ
                     </a>
                 </li>
@@ -286,117 +300,117 @@
                     <a href="https://tv.yandex.ru/program/spasi-svoyu-lyubov-3939804?eventId=147975691">
                         Спаси свою любовь
                     </a>
-                    <a class="additional" href="https://tv.yandex.ru/channel/tnt-33">
+                    <a class="minor" href="https://tv.yandex.ru/channel/tnt-33">
                         ТНТ
                     </a>
                 </li>
             </ul>
         </details>
-        <p class="widget-preview">Программа передач по каналам</p>
+        <p class="widget-preview minor">Программа передач по каналам</p>
     </div>
     <div class="main__film-widget">
         <details open>
             <summary class="widget-header">
-                <span class="content-close">
+                <span class="close">
                     <span>Сейчас в эфире</span>
                 </span>
             </summary>
 
-            <input type="radio" name="film-widget__header" id="header__now" class="header__now" checked>
-            <label for="header__now">Эфир</label>
+            <input type="radio" name="film-widget__tab" id="tab__now" class="tab__now tab hidden" checked>
+            <label for="tab__now" class="tab-label">Эфир</label>
 
-            <input type="radio" name="film-widget__header" id="header__film" class="header__film">
-            <label for="header__film">Фильмы</label>
+            <input type="radio" name="film-widget__tab" id="tab__film" class="tab__film tab hidden">
+            <label for="tab__film" class="tab-label">Фильмы</label>
 
-            <input type="radio" name="film-widget__header" id="header__serial" class="header__serial">
-            <label for="header__serial">Сериалы</label>
+            <input type="radio" name="film-widget__tab" id="tab__serial" class="tab__serial tab hidden">
+            <label for="tab__serial" class="tab-label">Сериалы</label>
 
-            <ul class="film-widget__now">
+            <ul class="film-widget__now film content hidden">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Битва за Севастополь
-                        <span class="additional">2015, военный</span>
+                        <span class="minor">2015, военный</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Движение вверх
-                        <span class="additional">2017, драма</span>
+                        <span class="minor">2017, драма</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Тренер
-                        <span class="additional">2018, драма</span>
+                        <span class="minor">2018, драма</span>
                     </a>
                 </li>
             </ul>
-            <ul class="film-widget__films">
+            <ul class="film-widget__films film content hidden">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Ромео и Джульетта
-                        <span class="additional">2013, драма</span>
+                        <span class="minor">2013, драма</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Легенда №17
-                        <span class="additional">2013, драма</span>
+                        <span class="minor">2013, драма</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Век Адалин
-                        <span class="additional">2015, драма</span>
+                        <span class="minor">2015, драма</span>
                     </a>
                 </li>
             </ul>
-            <ul class="film-widget__serial">
+            <ul class="film-widget__serial film content hidden">
                 <li>
                     <a href="https://yandex.ru/efir">
                         Зона
-                        <span class="additional">2017, ужасы</span>
+                        <span class="minor">2017, ужасы</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Маша и Медведь
-                        <span class="additional">2009, мультфильм</span>
+                        <span class="minor">2009, мультфильм</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://yandex.ru/efir">
                         Воскресший Эртугрул
-                        <span class="additional">2014, боевик</span>
+                        <span class="minor">2014, боевик</span>
                     </a>
                 </li>
             </ul>
         </details>
-        <p class="widget-preview">Эфир любимых каналов</p>
+        <p class="widget-preview minor">Эфир любимых каналов</p>
     </div>
 </main>
 <input type="checkbox" id="card" class="notify-desk__card" checked>
 <label for="card" class="notify-desk">
-    <span class="notify-desk__content">
-        <span class="notify-desk__login">
+    <span class="notify-desk__content block">
+        <span class="notify-desk__login block">
             <a href="https://passport.yandex.ru/profile">miraplane</a>
         </span>
-        <span class="notify-desk__item">
+        <span class="notify-desk__item block">
             <a href="https://mail.yandex.ru/">Почта<span class="value">37</span></a>
         </span>
-        <span class="notify-desk__item notify-desk__optional">
+        <span class="notify-desk__item notify-desk__optional block">
             <a href="https://mail.yandex.ru//compose">Написать письмо</a>
         </span>
-        <span class="notify-desk__item notify-desk__optional">
+        <span class="notify-desk__item notify-desk__optional block">
             <a href="https://disk.yandex.ru/?source=domik-main">Диск</a>
         </span>
     </span>
-    <span class="notify-desk__avatar notify-desk__optional">
+    <span class="notify-desk__avatar notify-desk__optional block">
         <img src="goals/avatars.png" class="avatar__img" alt="avatar">
     </span>
 </label>
 <footer class="page-footer">
-    <div class="page-footer__content">
+    <nav class="page-footer__nav-bar">
         <a href="https://direct.yandex.ru/?from=maintest_ru_razmestitrekl">Директ</a>
         <a href="https://metrika.yandex.ru/">Метрика</a>
         <a href="https://yandex.ru/adv/?from=main_bottom">Реклама</a>
@@ -408,7 +422,7 @@
         <a href="https://yandex.ru/legal/confidential/">Конфиденциальность</a>
         <a href="https://yandex.ru/legal/rules/">Пользовательское соглашение</a>
         <span class="page-footer__label">Яндекс</span>
-    </div>
+    </nav>
 </footer>
 </body>
 </html>
