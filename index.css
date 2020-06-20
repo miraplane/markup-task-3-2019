@@ -1,0 +1,515 @@
+body
+{
+    display: grid;
+    grid-template: 'header notify' 60px
+        'article notify' 1fr
+        'footer footer' 50px / 1fr 212px;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 1.25;
+    color: black;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover,
+a:hover span,
+.search-line__nav > a:hover,
+.main__offer > a:hover,
+.search-line__example > a:hover,
+.notify-desk__login::first-letter
+{
+    color: #dc143c;
+}
+
+.minor
+{
+    color: #808080;
+}
+
+.inline
+{
+    display: inline-block;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.page-header
+{
+    grid-area: header;
+    padding: 10px;
+}
+
+.page-header__nav-bar
+{
+    display: flex;
+    align-items: center;
+}
+
+.page-header__nav-bar > a
+{
+    margin: 10px;
+}
+
+.main
+{
+    grid-area: article;
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-rows: 176px 109px 83px 115px;
+    grid-template-columns: 1fr 260px 260px 260px 1fr;
+    grid-template-areas: '. news news offer .'
+        'logo search search search .'
+        '. weather traffic map .'
+        '. popular program film .';
+}
+
+.main__news-widget
+{
+    grid-area: news;
+    width: 512px;
+}
+
+.news-widget[open] > .widget-header
+{
+    margin-left: 343px;
+}
+
+.widget-rate
+{
+    margin-top: 10px;
+}
+
+.currency-rate
+{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.widget-header,
+.main__offer > a
+{
+    color: #0054b9;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.widget-header::-webkit-details-marker,
+.notify-desk > summary::-webkit-details-marker
+{
+    display: none;
+}
+
+.widget-header::after
+{
+    margin-left: 10px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url('goals/open.png');
+    position: absolute;
+}
+
+details[open] > .widget-header::after
+{
+    transform: rotate(180deg);
+}
+
+details[open] ~ .widget-preview,
+details[open] > summary > .close
+{
+    display: none;
+}
+
+details:not([open]) ~ .widget-preview
+{
+    display: inline-block;
+}
+
+.tab:checked + .tab-label
+{
+    color: #0054b9;
+}
+
+.tab-label
+{
+    margin-right: 10px;
+    color: #6da2e1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tab__today:checked ~ .news-widget__today,
+.tab__town:checked ~ .news-widget__town,
+.tab__interesting:checked ~ .news-widget__interesting,
+.tab__now:checked ~ .film-widget__now,
+.tab__film:checked ~ .film-widget__films,
+.tab__serial:checked ~ .film-widget__serial
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.content__item
+{
+    display: flex;
+    margin-top: 5px;
+}
+
+.content__item > img
+{
+    margin-left: -19px;
+    width: 15px;
+    height: 15px;
+}
+
+.content__item > a,
+.main__offer > p
+{
+    margin: 0;
+}
+
+.content__item > a
+{
+    margin-left: 5px;
+}
+
+.main__offer
+{
+    grid-area: offer;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__offer img
+{
+    margin-bottom: 10px;
+    width: 120px;
+    height: 90px;
+}
+
+.main__weather-widget
+{
+    grid-area: weather;
+}
+
+.main__traffic-widget
+{
+    grid-area: traffic;
+}
+
+.main__map-widget
+{
+    grid-area: map;
+}
+
+.main__popular-widget
+{
+    grid-area: popular;
+}
+
+.source::after
+{
+    content: '\2013';
+    margin-left: 5px;
+}
+
+.source
+{
+    font-weight: 700;
+}
+
+.page
+{
+    margin-left: 5px;
+}
+
+.popular-widget__content
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.main__program-widget
+{
+    grid-area: program;
+}
+
+.content
+{
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 0;
+
+}
+
+.program-widget__content > li > a
+{
+    margin-left: 10px;
+}
+
+.main__film-widget
+{
+    grid-area: film;
+}
+
+.film-widget[open] > .widget-header
+{
+    margin-left: 200px;
+}
+
+.film
+{
+    list-style-image: url('goals/play.svg');
+}
+
+.widget
+{
+    display: flex;
+    margin-top: 5px;
+}
+
+.widget > p
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+.map-widget__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.map-widget__content > a
+{
+    margin-right: 10px;
+}
+
+.widget_type_weather > img
+{
+    width: 48px;
+    height: 48px;
+}
+
+.widget_type_weather > .temp::after
+{
+    content: '\00B0';
+}
+
+.temp
+{
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.widget_type_traffic > img
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 33px;
+    height: 30px;
+}
+
+.notify-desk
+{
+    grid-area: notify;
+    display: grid;
+    grid-template: 'content avatar';
+    margin: 10px 10px 0 0;
+    padding: 15px;
+    width: 172px;
+    height: 50px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1);
+    background: #fff;
+}
+
+.notify-desk__optional
+{
+    opacity: 0;
+}
+
+.notify-desk__login
+{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.notify-desk__item
+{
+    margin: 5px 0;
+}
+
+.value
+{
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.notify-desk__card
+{
+    display: none;
+}
+
+.notify-desk__card:checked ~ .notify-desk
+{
+    height: 100px;
+}
+
+.notify-desk__card:checked ~ .notify-desk .notify-desk__optional
+{
+    opacity: 1;
+}
+
+.block
+{
+    display: block;
+}
+
+.notify-desk__content
+{
+    grid-area: content;
+}
+
+.notify-desk__avatar
+{
+    grid-area: avatar;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    margin-left: auto;
+
+    background: url('goals/circle.svg');
+}
+
+.avatar__img
+{
+    width: 28px;
+    height: 28px;
+
+    margin: 4px;
+}
+
+.page-footer
+{
+    grid-area: footer;
+    padding: 10px;
+
+    background: #dcdcdc;
+}
+
+.page-footer__nav-bar
+{
+    display: flex;
+    align-items: center;
+    color: #808080;
+}
+
+.page-footer__nav-bar > a
+{
+    margin: 5px;
+}
+
+.page-footer__nav-bar > .page-footer__label
+{
+    margin-left: auto;
+}
+
+.main__search-line
+{
+    grid-area: search;
+    display: grid;
+    grid-template-areas: 'what-serch'
+        'searcherLine'
+        'example';
+}
+
+.search-line__nav
+{
+    grid-area: what-serch;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.search-line__nav > a
+{
+    color: #0054b9;
+    margin-right: 20px;
+    font-size: 1.16em;
+}
+
+.search-line__example
+{
+    grid-area: example;
+}
+
+.search-line__example > p
+{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.search-line__example > a
+{
+    display: inline-block;
+    color: #808080;
+}
+
+.main__logo
+{
+    grid-area: logo;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.search-line__searcher
+{
+    grid-area: searcherLine;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.searcher__input
+{
+    width: 90%;
+    height: 36px;
+    border: 2px solid #ffd700;
+}
+
+.searcher__submit-button
+{
+    height: 36px;
+    width: 10%;
+    background: #ffd700;
+    border: #ffd700;
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.searcher__arrow
+{
+    width: 0;
+    height: 0;
+    border: 18px solid #fff;
+    border-left-color: #ffd700;
+    border-right: 0;
+}
